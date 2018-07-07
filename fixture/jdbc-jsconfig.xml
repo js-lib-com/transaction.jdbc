@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<js-config>
+	<managed-classes>
+		<data-source interface="js.db.DatabaseAdapter" implementation="js.db.JdbcAdapter" scope="APPLICATION" />
+	</managed-classes>
+	<data-source test-session="true">
+		<property name="driver" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/js_test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8" />
+		<property name="user" value="js" />
+		<property name="password" value="js" />
+		<property name="initialPoolSize" value="5" />
+		<property name="minPoolSize" value="5" />
+		<property name="maxPoolSize" value="140" />
+		<property name="maxStatements" value="50" />
+		<property name="acquireIncrement" value="3" />
+		<property name="maxIdleTime" value="1800" />
+		<property name="idleConnectionTestPeriod" value="0" />
+		<property name="testConnectionsOnCheckout" value="false" />
+	</data-source>
+</js-config>
