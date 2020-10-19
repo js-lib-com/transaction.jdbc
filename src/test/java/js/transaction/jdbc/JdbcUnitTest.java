@@ -10,7 +10,6 @@ import js.lang.ConfigBuilder;
 import js.transaction.Transaction;
 import js.transaction.TransactionManager;
 import js.transaction.WorkingUnit;
-import js.util.Classes;
 import junit.framework.TestCase;
 
 public class JdbcUnitTest extends TestCase
@@ -21,8 +20,7 @@ public class JdbcUnitTest extends TestCase
   protected void setUp() throws Exception
   {
     Properties properties = new Properties();
-    properties.setProperty("driver", "com.mysql.jdbc.Driver");
-    properties.setProperty("url", "jdbc:mysql://localhost:3306/test?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8");
+    properties.setProperty("url", "jdbc:mysql://localhost:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=UTF-8");
     properties.setProperty("user", "test");
     properties.setProperty("password", "test");
     properties.setProperty("initialPoolSize", "5");
@@ -40,7 +38,7 @@ public class JdbcUnitTest extends TestCase
 
   public void testExecuteProgrammaticTransaction() throws Exception
   {
-    TransactionManager transactionManager = Classes.newInstance("js.transaction.jdbc.TransactionManagerImpl");
+    TransactionManager transactionManager = new TransactionManagerImpl();
     transactionManager.config(config);
 
     final Person person = new Person();
@@ -68,7 +66,7 @@ public class JdbcUnitTest extends TestCase
 
   public void testExecuteJdbcTransaction() throws Exception
   {
-    TransactionManager transactionManager = Classes.newInstance("js.transaction.jdbc.TransactionManagerImpl");
+    TransactionManager transactionManager = new TransactionManagerImpl();
     transactionManager.config(config);
     Transaction t = transactionManager.createTransaction();
 
@@ -100,7 +98,7 @@ public class JdbcUnitTest extends TestCase
 
       public void run()
       {
-        TransactionManager transactionManager = Classes.newInstance("js.transaction.jdbc.TransactionManagerImpl");
+        TransactionManager transactionManager = new TransactionManagerImpl();
 
         for(int i = 0; i < 100; i++) {
           Transaction t = transactionManager.createTransaction();

@@ -14,7 +14,7 @@ import js.transaction.WorkingUnit;
  * 
  * @author Iulian Rotaru
  */
-final class TransactionManagerImpl implements TransactionManager {
+public final class TransactionManagerImpl implements TransactionManager {
 	private static final Log log = LogFactory.getLog(TransactionManagerImpl.class);
 
 	private JdbcAdapter adapter;
