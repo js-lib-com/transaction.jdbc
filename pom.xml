@@ -12,13 +12,12 @@
 		<dependency>
 			<groupId>com.js-lib</groupId>
 			<artifactId>js-transaction-api</artifactId>
-			<version>1.0</version>
+			<version>1.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.mchange</groupId>
 			<artifactId>c3p0</artifactId>
 			<version>0.9.5.4</version>
-			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
