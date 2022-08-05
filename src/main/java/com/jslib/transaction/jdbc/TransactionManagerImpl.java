@@ -1,4 +1,4 @@
-package js.transaction.jdbc;
+package com.jslib.transaction.jdbc;
 
 import js.lang.Config;
 import js.lang.ConfigException;

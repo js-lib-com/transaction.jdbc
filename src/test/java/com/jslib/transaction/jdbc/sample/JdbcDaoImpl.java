@@ -1,11 +1,12 @@
-package js.transaction.jdbc.sample;
+package com.jslib.transaction.jdbc.sample;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import com.jslib.transaction.jdbc.Person;
+
 import js.transaction.TransactionContext;
-import js.transaction.jdbc.Person;
 
 class JdbcDaoImpl implements Dao
 {

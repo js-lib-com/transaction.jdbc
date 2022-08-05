@@ -1,4 +1,4 @@
-package js.transaction.jdbc;
+package com.jslib.transaction.jdbc;
 
 import java.net.MalformedURLException;
 import java.net.URL;

@@ -1,6 +1,6 @@
-package js.transaction.jdbc.sample;
+package com.jslib.transaction.jdbc.sample;
 
-import js.transaction.jdbc.Person;
+import com.jslib.transaction.jdbc.Person;
 
 // @Transactional
 public interface Dao {
